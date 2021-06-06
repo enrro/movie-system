@@ -25,6 +25,10 @@ class User:
             for movie in self.movies:
                 f.write(f"{movie.name}, {movie.genre}, {str(movie.watched)}\n")
 
+    def set_watched(self, name):
+        for movie in self.movies:
+            if movie.name == name:
+                movie.watched = True
     # @classmethod
     # def load_from_file(cls, filename):
     #     with open(filename, 'r') as f:
